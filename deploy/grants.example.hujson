@@ -1,0 +1,18 @@
+// Merge with the existing tailnet policy; this is not a replacement policy.
+// Replace the example identity with actual permitted service operators.
+// Existing broad grants/ACLs can also grant access: this fragment cannot deny them.
+{
+  "groups": {
+    "group:kakao-readers": ["owner@example.com"],
+  },
+  "tagOwners": {
+    "tag:kakao-api": ["autogroup:admin"],
+  },
+  "grants": [
+    {
+      "src": ["group:kakao-readers"],
+      "dst": ["tag:kakao-api"],
+      "ip": ["tcp:443"],
+    },
+  ],
+}

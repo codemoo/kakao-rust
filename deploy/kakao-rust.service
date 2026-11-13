@@ -1,0 +1,24 @@
+[Unit]
+Description=Kakao private read API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kakao-rust
+Group=kakao-rust
+StateDirectory=kakao-rust
+StateDirectoryMode=0700
+UMask=0077
+ExecStart=/usr/local/bin/kakao-rust --data-dir /var/lib/kakao-rust serve --bind 127.0.0.1:8787
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/kakao-rust
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+
+[Install]
+WantedBy=multi-user.target

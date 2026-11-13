@@ -1,0 +1,22 @@
+name: macOS and Linux
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        rust: [1.88.0, stable]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install '${{ matrix.rust }}' --profile minimal --component rustfmt --component clippy
+          rustup default '${{ matrix.rust }}'
+      - name: Format, tests, and Clippy (synthetic data only)
+        run: ./scripts/check.sh

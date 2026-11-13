@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>dev.kakao-rust.api</string>
+  <key>ProgramArguments</key><array>
+    <string>/ABSOLUTE/PATH/kakao-rust</string>
+    <string>--data-dir</string><string>/ABSOLUTE/PATH/private-data</string>
+    <string>serve</string><string>--bind</string><string>127.0.0.1:8787</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><dict><key>Crashed</key><true/></dict>
+  <key>ThrottleInterval</key><integer>30</integer>
+  <key>Umask</key><integer>63</integer>
+</dict></plist>

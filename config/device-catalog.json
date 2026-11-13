@@ -1,0 +1,25 @@
+{
+  "version": "2026-11-13",
+  "devices": [
+    {
+      "release_date": "2023-08-11",
+      "model_code": "SM-X710",
+      "manufacturer": "Samsung",
+      "name": "Galaxy Tab S9",
+      "source_urls": [
+        "https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet",
+        "https://doc.samsungmobile.com/SM-X710/027655230831/zho-cn.html"
+      ]
+    },
+    {
+      "release_date": "2023-08-11",
+      "model_code": "SM-X810",
+      "manufacturer": "Samsung",
+      "name": "Galaxy Tab S9+",
+      "source_urls": [
+        "https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet",
+        "https://doc.samsungmobile.com/SM-X810/027657230831/eng.html"
+      ]
+    }
+  ]
+}
